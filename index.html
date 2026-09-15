@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityFix — Local Services</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="navbar">
+  <a class="brand" href="#">City<span>Fix</span></a>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#how">How it works</a>
+    <a href="#provider">Join as Provider</a>
+  </nav>
+  <button class="btn small" id="loginBtn">Login</button>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-content">
+    <p class="eyebrow">LOCAL SERVICES • ONE PLACE</p>
+    <h1>Get trusted services<br><span>at your doorstep.</span></h1>
+    <p class="sub">Book cleaners, electricians, plumbers, AC technicians and more from one simple platform.</p>
+    <div class="search-box">
+      <select id="location">
+        <option value="">Select your city</option>
+        <option>Mangaluru</option><option>Kannur</option><option>Mysuru</option>
+        <option>Bengaluru</option><option>Kozhikode</option>
+      </select>
+      <input id="search" type="search" placeholder="What service do you need?">
+      <button class="btn" id="searchBtn">Find a service</button>
+    </div>
+    <div class="trust"><span>✓ Verified providers</span><span>✓ Transparent pricing</span><span>✓ Easy booking</span></div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="section-head">
+    <div><p class="eyebrow">POPULAR</p><h2>What do you need?</h2></div>
+    <button class="text-btn" id="showAll">View all →</button>
+  </div>
+  <div class="service-grid" id="serviceGrid"></div>
+</section>
+
+<section class="how section" id="how">
+  <p class="eyebrow">SIMPLE PROCESS</p>
+  <h2>Book in 3 easy steps</h2>
+  <div class="steps">
+    <article><b>01</b><h3>Choose a service</h3><p>Pick the service you need and tell us what has to be done.</p></article>
+    <article><b>02</b><h3>Pick a time</h3><p>Choose your preferred date, time and service location.</p></article>
+    <article><b>03</b><h3>Get it done</h3><p>A service professional comes to you. Pay and review after completion.</p></article>
+  </div>
+</section>
+
+<section class="provider" id="provider">
+  <div><p class="eyebrow">FOR PROFESSIONALS</p><h2>Want to earn with CityFix?</h2>
+  <p>Join as a service provider and get local customers through the platform.</p></div>
+  <button class="btn light" id="providerBtn">Become a provider</button>
+</section>
+</main>
+
+<footer><strong>CityFix</strong><span>Local services, made simple.</span><span>© 2026 CityFix</span></footer>
+
+<div class="modal hidden" id="bookingModal">
+  <div class="modal-card">
+    <button class="close" data-close>×</button>
+    <p class="eyebrow">BOOK SERVICE</p>
+    <h2 id="modalTitle">Book a service</h2>
+    <form id="bookingForm">
+      <label>Your name<input required id="name" placeholder="Enter your name"></label>
+      <label>Phone number<input required id="phone" type="tel" placeholder="10-digit mobile number"></label>
+      <label>Address<textarea required id="address" placeholder="Service address"></textarea></label>
+      <div class="two">
+        <label>Date<input required id="date" type="date"></label>
+        <label>Time<input required id="time" type="time"></label>
+      </div>
+      <button class="btn full" type="submit">Confirm booking</button>
+    </form>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
